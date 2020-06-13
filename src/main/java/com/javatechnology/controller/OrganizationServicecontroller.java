@@ -17,8 +17,13 @@ public class OrganizationServicecontroller {
 	
 	@RequestMapping(value="/{organizationid}")
 	public Organization getOrganization() {
+		
 		return organizationService.getOrganization();
 		
+	}
+	@RequestMapping(value="/{organizationid}",method=RequestMethod.POST)
+	public void saveOrganization(Organization organization) {
+		organizationService.saveOrganization(organization);
 	}
 	
 
